@@ -1,0 +1,270 @@
+#mainVisual {
+    height: calc(100vh - 180px);
+    position: relative;
+    overflow: hidden;
+    margin:90px 50px 0;
+}
+#mainVisual li {
+    position: relative;
+}
+#mainVisual li .videoBox {
+    position: relative;
+    height: 100%;
+}
+#mainVisual li .videoBox:before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+    border: 1px solid #f00;
+}
+#mainVisual li .videoBox .video {
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    height: 100%;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+}
+#mainVisual li .slogan {
+    position: absolute;
+    left:200px;
+    top:100px;
+    color:#fff;
+    z-index: 2;
+    font-size: 48px;
+    line-height: 1.25;
+    font-weight: 500;
+    opacity: 0;
+    transform:translateY(50px);
+    transition: all 1s 1s ease;
+}
+#mainVisual li .txt {
+    position: absolute;
+    right:200px;
+    bottom:300px;
+    color:#fff;
+    z-index: 2;
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 500;
+}
+#mainVisual li .txt p {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform:translateY(50px);
+    transition: all 1s 3s ease;
+}
+#mainVisual li .txt .rect {
+    width:0;
+    height: 300px;
+    position: absolute;
+    left:-50px;
+    top:-200px;
+    transition: width 1s 1s ease , transform 1s 2s ease;
+}
+#mainVisual #visual01 .txt .rect {
+    background-color: #0d28bd;
+}
+#mainVisual #visual02 .txt .rect {
+    background-color: #0088ce;
+}
+#mainVisual #visual03 .txt .rect {
+    background-color: #00ad83;
+}
+
+#mainVisual .swiper-slide-active .slogan {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#mainVisual .swiper-slide-active .txt .rect {
+    width:300px;
+}
+#mainVisual #visual01.swiper-slide-active .txt .rect {
+    transform:rotate(18deg)
+}
+#mainVisual #visual02.swiper-slide-active .txt .rect {
+    transform:rotate(-4deg)
+}
+#mainVisual #visual03.swiper-slide-active .txt .rect {
+    transform:rotate(6deg)
+}
+#mainVisual .swiper-slide-active .txt p {
+    opacity: 1;
+    transform:translateY(0);
+}
+#quickMenu {
+    margin: 50px 0;
+}
+
+#quickMenu .container {
+    padding:0 100px;
+}
+
+#quickMenu ul li {
+    width:25%;
+    font-size: 24px;
+    text-align: center;
+}
+#quickMenu ul li .img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+}
+#quickMenu ul li .img img {
+    width:64px;
+}
+#quickMenu ul li .img .motion {
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+#quickMenu ul li:hover .img .motion {
+    opacity: 1;
+}
+#media {
+    margin-top: 100px;
+}
+#media .container {
+    padding:0 100px;
+}
+#media h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+#media ul {
+    margin: 0 -10px;
+}
+#media li {
+    width:calc(33.33% - 20px);
+    margin:10px;
+    position: relative;
+    overflow: hidden;
+}
+#media li:before {
+    content: '';
+    display: block;
+    padding-top: 70%;
+}
+#media li a {
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+}
+#media li .img {
+    height: 100%;
+    width:100%;
+}
+#media li .txt:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width:100%;
+    height: 5px;
+    background-color: #00ad83;
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+#media li:hover .txt:after {
+    height: 130px;
+}
+#media li img {
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    transition: all 0.25s ease;
+}
+#media li:hover img {
+    transform: scale(1.15);
+}
+#media li .txt {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    color:#fff;
+    z-index: 2;
+    font-size: 22px;
+    padding:40px 20px;
+    box-sizing: border-box;
+    line-height: 1.25;
+}
+
+#search {
+    margin-top: 80px;
+    padding:0 50px;
+}
+#search .container {
+    background-color: #173beb;
+    padding:100px 50px;
+    color:#fff;
+    position: relative;
+}
+#search h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    position: absolute;
+    top:120px;
+    
+}
+#search .searchInput {
+    float: left;
+    width:50%;
+    padding-right: 50px;
+    box-sizing: border-box;
+    margin-top: 120px;
+    position: relative;
+}
+#search .searchInput input {
+    padding:20px;
+    box-sizing: border-box;
+    width:100%;
+    font-size: 22px;
+}
+#search .searchInput button {
+    position: absolute;
+    right:80px;
+    top:50%;
+    transform: translateY(-50%);
+}
+#search .tagCloud {
+    float: left;
+    width:50%;
+    text-align: center;
+    font-size: 0;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+#search .tagCloud li {
+    display: inline-block;
+    margin: 5px;
+}
+#search .tagCloud li a {
+    display: block;
+    padding:15px 30px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.25);
+}
+#search .tagCloud li a span {
+    vertical-align: middle;
+}
+#search .tagCloud li a:hover {
+    background-color: #fff;
+    color:#111;
+}
+.container {
+    max-width:1920px;
+    margin:0 auto;
+}
+

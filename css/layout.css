@@ -1,0 +1,231 @@
+body {
+  font-family: "Poppins", "Noto Sans KR";
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+}
+
+#header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  padding: 0 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+
+#header.on .btnAll span:nth-child(1) {
+  top: 40px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#header.on .btnAll span:nth-child(2) {
+  opacity: 0;
+  left: -100px;
+}
+
+#header.on .btnAll span:nth-child(3) {
+  top: 40px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#header #logo {
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+#header #logo a {
+  width: 100px;
+  height: 100px;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #bf0c14;
+  overflow: hidden;
+  text-align: center;
+}
+
+#header #logo a .word {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header #logo a .word .char {
+  width: 20px;
+}
+
+#header .btnAll {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: -20px;
+}
+
+#header .btnAll span {
+  position: absolute;
+  left: 20px;
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+#header .btnAll span:nth-child(1) {
+  top: 25px;
+}
+
+#header .btnAll span:nth-child(2) {
+  top: 40px;
+}
+
+#header .btnAll span:nth-child(3) {
+  top: 55px;
+}
+
+#gnb {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #8f090f;
+  z-index: 1;
+  top: -100%;
+  color: #fff;
+}
+
+#gnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  height: 100%;
+  padding-left: 50%;
+}
+
+#gnb ul li {
+  font-size: 120px;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+#main {
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 1px, 0, transparent 100px) #333;
+  overflow: hidden;
+  position: relative;
+}
+
+#main #words {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  min-height: 100vh;
+}
+
+#main #words li {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+#main #words .word {
+  color: #fff;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main .woman {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 0;
+}
+
+#main .woman img {
+  height: 860px;
+}
+
+#main .slogan {
+  padding: 50px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  position: absolute;
+  left: 200px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 5vw;
+  color: #111;
+  font-weight: 100;
+  overflow: hidden;
+  text-shadow: 1px 1px 0 #4d4d4d,2px 2px 0 #4d4d4d,3px 3px 0 #4d4d4d,4px 4px 0 #4d4d4d,5px 5px 0 #4d4d4d,6px 6px 0 #4d4d4d,7px 7px 0 #4d4d4d,8px 8px 0 #4d4d4d,9px 9px 0 #4d4d4d,10px 10px 0 #4d4d4d,11px 11px 0 #4d4d4d,12px 12px 0 #4d4d4d,13px 13px 0 #4d4d4d,14px 14px 0 #4d4d4d,15px 15px 0 #4d4d4d,16px 16px 0 #4d4d4d,17px 17px 0 #4d4d4d,18px 18px 0 #4d4d4d,19px 19px 0 #4d4d4d,20px 20px 0 #4d4d4d,21px 21px 0 #4d4d4d,22px 22px 0 #4d4d4d,23px 23px 0 #4d4d4d,24px 24px 0 #4d4d4d,25px 25px 0 #4d4d4d,26px 26px 0 #4d4d4d,27px 27px 0 #4d4d4d,28px 28px 0 #4d4d4d,29px 29px 0 #4d4d4d,30px 30px 0 #4d4d4d,31px 31px 0 #4d4d4d,32px 32px 0 #4d4d4d,33px 33px 0 #4d4d4d,34px 34px 0 #4d4d4d,35px 35px 0 #4d4d4d,36px 36px 0 #4d4d4d,37px 37px 0 #4d4d4d,38px 38px 0 #4d4d4d,39px 39px 0 #4d4d4d,40px 40px 0 #4d4d4d,41px 41px 0 #4d4d4d,42px 42px 0 #4d4d4d,43px 43px 0 #4d4d4d,44px 44px 0 #4d4d4d,45px 45px 0 #4d4d4d,46px 46px 0 #4d4d4d,47px 47px 0 #4d4d4d,48px 48px 0 #4d4d4d,49px 49px 0 #4d4d4d,50px 50px 0 #4d4d4d,51px 51px 0 #4d4d4d,52px 52px 0 #4d4d4d,53px 53px 0 #4d4d4d,54px 54px 0 #4d4d4d,55px 55px 0 #4d4d4d,56px 56px 0 #4d4d4d,57px 57px 0 #4d4d4d,58px 58px 0 #4d4d4d,59px 59px 0 #4d4d4d,60px 60px 0 #4d4d4d,61px 61px 0 #4d4d4d,62px 62px 0 #4d4d4d,63px 63px 0 #4d4d4d,64px 64px 0 #4d4d4d,65px 65px 0 #4d4d4d,66px 66px 0 #4d4d4d,67px 67px 0 #4d4d4d,68px 68px 0 #4d4d4d,69px 69px 0 #4d4d4d,70px 70px 0 #4d4d4d,71px 71px 0 #4d4d4d,72px 72px 0 #4d4d4d,73px 73px 0 #4d4d4d,74px 74px 0 #4d4d4d,75px 75px 0 #4d4d4d,76px 76px 0 #4d4d4d,77px 77px 0 #4d4d4d,78px 78px 0 #4d4d4d,79px 79px 0 #4d4d4d,80px 80px 0 #4d4d4d,81px 81px 0 #4d4d4d,82px 82px 0 #4d4d4d,83px 83px 0 #4d4d4d,84px 84px 0 #4d4d4d,85px 85px 0 #4d4d4d,86px 86px 0 #4d4d4d,87px 87px 0 #4d4d4d,88px 88px 0 #4d4d4d,89px 89px 0 #4d4d4d,90px 90px 0 #4d4d4d,91px 91px 0 #4d4d4d,92px 92px 0 #4d4d4d,93px 93px 0 #4d4d4d,94px 94px 0 #4d4d4d,95px 95px 0 #4d4d4d,96px 96px 0 #4d4d4d,97px 97px 0 #4d4d4d,98px 98px 0 #4d4d4d,99px 99px 0 #4d4d4d,100px 100px 0 #4d4d4d,101px 101px 0 #4d4d4d,102px 102px 0 #4d4d4d,103px 103px 0 #4d4d4d,104px 104px 0 #4d4d4d,105px 105px 0 #4d4d4d,106px 106px 0 #4d4d4d,107px 107px 0 #4d4d4d,108px 108px 0 #4d4d4d,109px 109px 0 #4d4d4d,110px 110px 0 #4d4d4d,111px 111px 0 #4d4d4d,112px 112px 0 #4d4d4d,113px 113px 0 #4d4d4d,114px 114px 0 #4d4d4d,115px 115px 0 #4d4d4d,116px 116px 0 #4d4d4d,117px 117px 0 #4d4d4d,118px 118px 0 #4d4d4d,119px 119px 0 #4d4d4d,120px 120px 0 #4d4d4d,121px 121px 0 #4d4d4d,122px 122px 0 #4d4d4d,123px 123px 0 #4d4d4d,124px 124px 0 #4d4d4d,125px 125px 0 #4d4d4d,126px 126px 0 #4d4d4d,127px 127px 0 #4d4d4d,128px 128px 0 #4d4d4d,129px 129px 0 #4d4d4d,130px 130px 0 #4d4d4d,131px 131px 0 #4d4d4d,132px 132px 0 #4d4d4d,133px 133px 0 #4d4d4d,134px 134px 0 #4d4d4d,135px 135px 0 #4d4d4d,136px 136px 0 #4d4d4d,137px 137px 0 #4d4d4d,138px 138px 0 #4d4d4d,139px 139px 0 #4d4d4d,140px 140px 0 #4d4d4d,141px 141px 0 #4d4d4d,142px 142px 0 #4d4d4d,143px 143px 0 #4d4d4d,144px 144px 0 #4d4d4d,145px 145px 0 #4d4d4d,146px 146px 0 #4d4d4d,147px 147px 0 #4d4d4d,148px 148px 0 #4d4d4d,150px 150px 0 #4d4d4d;;
+}
+
+#main .slogan > span {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#main .slogan > span .word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
